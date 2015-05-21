@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="proximanova-regular-webfont.ttf">
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -28,14 +33,14 @@
                     <rect key="frame" x="95" y="165" width="150" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="Nfl-kE-RtH"/>
-                        <constraint firstAttribute="width" constant="150" id="wgj-w7-6zr"/>
+                        <constraint firstAttribute="width" constant="150" placeholder="YES" id="wgj-w7-6zr"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前积分：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8S-8i-guG">
-                    <rect key="frame" x="95" y="193" width="70" height="18"/>
+                    <rect key="frame" x="95" y="185" width="70" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="46O-dp-ymr"/>
                         <constraint firstAttribute="height" constant="18" id="hFx-Fp-SoK"/>
@@ -45,7 +50,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvj-pJ-5AQ">
-                    <rect key="frame" x="165" y="193" width="59" height="18"/>
+                    <rect key="frame" x="165" y="185" width="59" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="59" id="504-v7-H5C"/>
                         <constraint firstAttribute="height" constant="18" id="ahe-Ig-6kW"/>
@@ -62,9 +67,9 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心情" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9Y-8J-ENc">
-                    <rect key="frame" x="95" y="219" width="264" height="50"/>
+                    <rect key="frame" x="21" y="203" width="338" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Swg-uj-l7C"/>
+                        <constraint firstAttribute="height" constant="50" placeholder="YES" id="Swg-uj-l7C"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -73,12 +78,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="A8S-8i-guG" firstAttribute="top" secondItem="WTQ-hk-bZg" secondAttribute="bottom" constant="8" id="3ec-LF-R8h"/>
+                <constraint firstItem="A8S-8i-guG" firstAttribute="top" secondItem="WTQ-hk-bZg" secondAttribute="bottom" id="3ec-LF-R8h"/>
                 <constraint firstItem="Zg4-pp-GU8" firstAttribute="top" secondItem="yzP-B1-bCF" secondAttribute="bottom" constant="5" id="5r3-k0-WhH"/>
-                <constraint firstItem="m9Y-8J-ENc" firstAttribute="top" secondItem="vvj-pJ-5AQ" secondAttribute="bottom" constant="8" id="81J-KZ-FAk"/>
+                <constraint firstItem="m9Y-8J-ENc" firstAttribute="top" secondItem="vvj-pJ-5AQ" secondAttribute="bottom" id="81J-KZ-FAk"/>
                 <constraint firstItem="yzP-B1-bCF" firstAttribute="top" secondItem="M3c-ui-z0f" secondAttribute="top" id="CA4-93-Vud"/>
                 <constraint firstItem="vvj-pJ-5AQ" firstAttribute="leading" secondItem="A8S-8i-guG" secondAttribute="trailing" id="Lho-CW-zMS"/>
-                <constraint firstItem="vvj-pJ-5AQ" firstAttribute="top" secondItem="WTQ-hk-bZg" secondAttribute="bottom" constant="8" id="SSz-s1-8Nk"/>
+                <constraint firstItem="vvj-pJ-5AQ" firstAttribute="top" secondItem="WTQ-hk-bZg" secondAttribute="bottom" id="SSz-s1-8Nk"/>
                 <constraint firstItem="vxc-WS-gXH" firstAttribute="leading" secondItem="M3c-ui-z0f" secondAttribute="leading" constant="21" id="UF8-QQ-mkz"/>
                 <constraint firstItem="vxc-WS-gXH" firstAttribute="top" secondItem="M3c-ui-z0f" secondAttribute="top" constant="126" id="Wid-3t-sni"/>
                 <constraint firstItem="yzP-B1-bCF" firstAttribute="leading" secondItem="M3c-ui-z0f" secondAttribute="leading" id="ZVr-Cs-qy0"/>
@@ -86,7 +91,7 @@
                 <constraint firstItem="A8S-8i-guG" firstAttribute="leading" secondItem="M3c-ui-z0f" secondAttribute="leading" constant="95" id="frU-YS-e1x"/>
                 <constraint firstItem="WTQ-hk-bZg" firstAttribute="top" secondItem="yzP-B1-bCF" secondAttribute="bottom" constant="5" id="kix-x8-yAC"/>
                 <constraint firstItem="Zg4-pp-GU8" firstAttribute="leading" secondItem="WTQ-hk-bZg" secondAttribute="trailing" constant="1" id="laH-0t-hfE"/>
-                <constraint firstItem="m9Y-8J-ENc" firstAttribute="leading" secondItem="M3c-ui-z0f" secondAttribute="leading" constant="95" id="nX1-q2-xvi"/>
+                <constraint firstItem="m9Y-8J-ENc" firstAttribute="leading" secondItem="M3c-ui-z0f" secondAttribute="leading" constant="21" id="nX1-q2-xvi"/>
                 <constraint firstAttribute="trailing" secondItem="yzP-B1-bCF" secondAttribute="trailing" id="tOf-RV-mYy"/>
                 <constraint firstAttribute="trailing" secondItem="m9Y-8J-ENc" secondAttribute="trailing" constant="20" id="wL8-FS-fNp"/>
             </constraints>

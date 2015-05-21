@@ -11,16 +11,34 @@
 #import "SQmyViewController.h"
 
 @interface SQmyViewController ()
-
+{
+    NSArray *_titleArray;
+    NSArray *_titleImageArray;
+}
 @end
 
 @implementation SQmyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor lightGrayColor];
+    self.view.backgroundColor=[UIColor colorWithRed:0.94 green:0.93 blue:0.96 alpha:1.0];
     self.halfView=[[halfView alloc]initWithFrame:CGRectMake(0, 0, __kScreenWidth, 304) withController:self];
-    [self.view addSubview:self.halfView];
+    //self.halfView.backgroundColor=[UIColor lightGrayColor];
+    self.myScroller=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, __kScreenWidth,__kScreenHeight-49)];
+   // self.myScroller.contentSize=CGSizeMake(__kScreenWidth, __kScreenHeight);
+
+    self.myScroller.scrollEnabled=YES;
+    
+    [self.myScroller addSubview:self.halfView];
+
+    self.myTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, self.halfView.frame.size.height+10, __kScreenWidth, 200) style:UITableViewStylePlain];
+    _titleArray=[[NSArray alloc]initWithObjects:@"我的积分",@"我的消息",@"我的社区",@"我的积分历史",@"设置", nil];
+    _titleImageArray=[[NSArray alloc]initWithObjects:@"-integral",@"message",@"community",@"story",@"setting",nil];
+    self.myTableView.delegate=self;
+    self.myTableView.dataSource=self;
+    [self.myScroller addSubview:self.myTableView];
+    self.myScroller.contentSize=CGSizeMake(__kScreenWidth, self.myTableView.frame.size.height+self.myTableView.frame.origin.y+10);
+    [self.view addSubview:self.myScroller];
     //[self configureHalf];
 }
 //调整上半部分
@@ -77,7 +95,32 @@
 //{
 //    NSLog(@"success");
 //}
-- (void)didReceiveMemoryWarning {
+#pragma tableDelegate
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _titleArray.count;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 40;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *cellid=@"cellid";
+    UITableViewCell *cell=(UITableViewCell *)[tableView  dequeueReusableCellWithIdentifier:cellid];
+    if (cell==nil) {
+        cell =[[UITableViewCell alloc]initWithFrame:CGRectZero];
+    }
+    [[cell imageView]setImage:[UIImage imageNamed:_titleImageArray[indexPath.row]]];
+    [[cell textLabel] setText:_titleArray[indexPath.row]];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"han ");
+}
+-(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

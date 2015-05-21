@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *motionLab;
 
 @property id controller;
-
+@property NSLayoutConstraint *CellHeight;
+@property float newHeight;
 -(id)initWithFrame:(CGRect)frame withController: (id )_controller;
 @end

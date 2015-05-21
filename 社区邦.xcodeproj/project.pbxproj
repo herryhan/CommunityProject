@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC17F7491B0D831900442D32 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC17F7481B0D831900442D32 /* QuartzCore.framework */; };
 		ACE065841B0B7DC800A83725 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE065831B0B7DC800A83725 /* main.m */; };
 		ACE065871B0B7DC800A83725 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE065861B0B7DC800A83725 /* AppDelegate.m */; };
 		ACE0658A1B0B7DC800A83725 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE065891B0B7DC800A83725 /* ViewController.m */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC17F7481B0D831900442D32 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ACE0657E1B0B7DC800A83725 /* 社区邦.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "社区邦.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE065821B0B7DC800A83725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACE065831B0B7DC800A83725 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC17F7491B0D831900442D32 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +93,7 @@
 		ACE065751B0B7DC800A83725 = {
 			isa = PBXGroup;
 			children = (
+				AC17F7481B0D831900442D32 /* QuartzCore.framework */,
 				ACE065801B0B7DC800A83725 /* 社区邦 */,
 				ACE0659A1B0B7DC800A83725 /* 社区邦Tests */,
 				ACE0657F1B0B7DC800A83725 /* Products */,
@@ -514,6 +518,7 @@
 				ACE065A31B0B7DC800A83725 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACE065A41B0B7DC800A83725 /* Build configuration list for PBXNativeTarget "社区邦Tests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +527,7 @@
 				ACE065A61B0B7DC800A83725 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

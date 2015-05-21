@@ -28,12 +28,12 @@
 }
 -(void)createTabBar
 {
-    _tabbar = [[UIView alloc] initWithFrame:CGRectMake(0, __kScreenHeight-48.5, __kScreenWidth, 49)];
-    //_tabbar.backgroundColor = [UIColor lightGrayColor];
+    _tabbar = [[UIView alloc] initWithFrame:CGRectMake(0, __kScreenHeight-49, __kScreenWidth, 49)];
+    _tabbar.backgroundColor = [UIColor whiteColor];
     
-    UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, __kScreenHeight-48, __kScreenWidth, 0.5)];
-    line.backgroundColor=[UIColor grayColor];
-    [self.view addSubview:line];
+    UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, __kScreenWidth, 0.6)];
+    line.backgroundColor=[UIColor blackColor];
+    [_tabbar addSubview:line];
     
     // 定制 Button
     
@@ -62,6 +62,7 @@
         }
     }
     //_tabbar.alpha=0.8;
+    //_tabbar.backgroundColor=[UIColor whiteColor];
     [self.view addSubview:_tabbar];
 }
 -(void)btnPress:(UIButton *)btn
