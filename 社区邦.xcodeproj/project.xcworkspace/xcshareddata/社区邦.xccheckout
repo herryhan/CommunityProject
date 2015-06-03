@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>595483E3-9476-4D57-B5AE-E8C4D8E91668</string>
 	<key>IDESourceControlProjectName</key>
-	<string>社区邦</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>65809B6F531FFA0811D6509D0B65F0CD8250601F</key>
 		<string>https://github.com/herryhan/CommunityProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>社区邦.xcodeproj</string>
+	<string>社区邦.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>65809B6F531FFA0811D6509D0B65F0CD8250601F</key>
